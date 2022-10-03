@@ -71,10 +71,6 @@
                             <Trigger Property="IsDefaulted" Value="true">
                                 <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />
                             </Trigger>
-                            <Trigger Property="IsPressed" Value="true">
-                                <Setter TargetName="border" Property="Background" Value="{StaticResource Button.Pressed.Background}" />
-                                <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource Button.Pressed.Border}" />
-                            </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
                                 <Setter TargetName="border" Property="Background" Value="{StaticResource Button.Disabled.Background}" />
                                 <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource Button.Disabled.Border}" />
@@ -88,7 +84,7 @@
 
     </Window.Resources>
     <Grid>
-        
+
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black"/>
@@ -103,7 +99,7 @@
                 </LinearGradientBrush>
             </Label.Foreground>
         </Label>
-        <TextBox x:Name="parol" HorizontalAlignment="Center" Margin="0,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" FontSize="24" Height="46" Background="{x:Null}" TextChanged="parol_TextChanged">
+        <TextBox x:Name="parol" HorizontalAlignment="Center" Margin="0,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" FontSize="24" Height="46" Background="{x:Null}" TextChanged="parol_TextChanged">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Red"/>
@@ -122,7 +118,7 @@
             </TextBox.BorderBrush>
         </TextBox>
         <Button x:Name="registration" Style="{DynamicResource DefaultButtonStyle}" Content="Зарегистрироваться" HorizontalAlignment="Center" Margin="0,296,0,0" VerticalAlignment="Top" Click="registration_Click" Height="67" Width="293" FontFamily="Mistral" FontSize="36" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFEAEC54"/>
-        <Label Content="Пароль" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="99" FontSize="36" FontFamily="Mistral" Foreground="#FFEAEC54" Margin="359,190,0,0"/>
+        <Label Content="Пароль" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Width="96" FontSize="36" FontFamily="Mistral" Foreground="#FFEAEC54" Margin="0,185,0,0"/>
 
     </Grid>
 </Window>
