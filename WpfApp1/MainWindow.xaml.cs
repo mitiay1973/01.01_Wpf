@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,11 +28,9 @@ namespace WpfApp1
         public string log1;
         public string par1;
         Registration reg = new Registration();
-        public MainWindow(string l, string p)
+        public MainWindow()
         {
             InitializeComponent();
-            log1 = l;
-            par1 = p;
         }
 
         private void login_TextChanged(object sender, TextChangedEventArgs e)
@@ -45,25 +45,35 @@ namespace WpfApp1
 
         private void avtoriz_Click(object sender, RoutedEventArgs e)
         {
-            log = login.Text;
-            par = parol.Text;
-            if (log == log1)
+            using (SqlConnection connection = new SqlConnection("server=ngknn.ru;Trusted_Connection=No;DataBase=43p_rad_Sor_Man;User=33П;PWD=12357"))
             {
-                if (par == par1)
+                connection.Open();
+                SqlCommand command = new SqlCommand("select COUNT(*) from Users", connection);
+                int n= Convert.ToInt32(command.ExecuteScalar().ToString());
+                for (int i = 1; i <= n; i++)
                 {
-                    Glavnaya glavnaya = new Glavnaya();
-                    glavnaya.Show();
-                    Close();
+                    SqlCommand command1 = new SqlCommand("SELECT [Login] FROM [dbo].[Users] WHERE [ID_User] = " + i + "", connection);
+                    log = command1.ExecuteScalar().ToString();
+                        if(log==login.Text)
+                        {
+                            int h = i;
+                                SqlCommand command2 = new SqlCommand("SELECT [Password] FROM [dbo].[Users] WHERE [ID_User] = " + h + "", connection);
+                                par = command2.ExecuteScalar().ToString();
+                        if (par == parol.Text)
+                        {
+                            Glavnaya glavnaya = new Glavnaya();
+                            glavnaya.Show();
+                            Close();
+                            break;
+                        
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Проверьте введенные данные");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Проверьте введенные данные");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Проверьте введенные данные");
-            }
+            }         
         }
 
         public void registr_Click(object sender, RoutedEventArgs e)
@@ -71,5 +81,22 @@ namespace WpfApp1
             this.Close();
             reg.Show();
         }
+        public DataTable Select(string selectSQL) // функция подключения к базе данных и обработка запросов
+        {
+            DataTable dataTable = new DataTable("dataBase"); // создаём таблицу в приложении
+                                                             // подключаемся к базе данных
+            SqlConnection sqlConnection = new SqlConnection("server=ngknn.ru;Trusted_Connection=No;DataBase=43p_rad_Sor_Man;User=33П;PWD=12357");
+            sqlConnection.Open(); // открываем базу данных
+            SqlCommand sqlCommand = sqlConnection.CreateCommand(); // создаём команду
+            sqlCommand.CommandText = selectSQL; // присваиваем команде текст
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand); // создаём обработчик
+            sqlDataAdapter.Fill(dataTable);
+            sqlConnection.Close(); // возращаем таблицу с результатом
+            return dataTable;
+        }
     }
+
 }
+
+
+
