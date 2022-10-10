@@ -93,6 +93,25 @@ namespace WpfApp1
             sqlConnection.Close(); // возращаем таблицу с результатом
             return dataTable;
         }
+
+        private void addIstochnik_Click(object sender, RoutedEventArgs e)
+        {
+            Add_vibros vibr = new Add_vibros();
+            vibr.Show();
+            Close();
+        }
+
+        private void delIstochnik_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void redactIstochnik_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            Red_vibros Rvibr = new Red_vibros();
+            Rvibr.Show();
+            Close();
+        }
     }
 
     internal class Vibros

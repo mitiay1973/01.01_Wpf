@@ -78,12 +78,33 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Del_vibros.xaml.cs">
+      <DependentUpon>Del_vibros.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Red_vibros.xaml.cs">
+      <DependentUpon>Red_vibros.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Add_vibros.xaml.cs">
+      <DependentUpon>Add_vibros.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Glavnaya.xaml.cs">
       <DependentUpon>Glavnaya.xaml</DependentUpon>
     </Compile>
     <Compile Include="Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
+    <Page Include="Del_vibros.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Red_vibros.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Add_vibros.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Glavnaya.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

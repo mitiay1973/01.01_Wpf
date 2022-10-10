@@ -8,16 +8,16 @@
         mc:Ignorable="d"
         Title="Glavnaya" Height="600" Width="800" Icon="/png-transparent-factory-pipe-silhouette-factory-refinery-industrial-production.png">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF85A45A" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="183*"/>
             <ColumnDefinition Width="217*"/>
         </Grid.ColumnDefinitions>
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF85A45A"/>
-                <GradientStop Color="White" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
 
         <ComboBox x:Name="istok" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Width="76" Background="{x:Null}" Foreground="{x:Null}" BorderBrush="{x:Null}">
             <Button Background="#FFCEF192" Content="Добавить" HorizontalAlignment="Center" RenderTransformOrigin="0.5,1" VerticalAlignment="Center"/>
@@ -36,19 +36,19 @@
         </ComboBox>
         <Label Content="Источник выбросов" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top"/>
         <Label Content="Выбросы" HorizontalAlignment="Left" Margin="13,286,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="addIstochnik" Content="Добавить источник" HorizontalAlignment="Left" Margin="269,142,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <Button x:Name="delIstochnik" Content="Удалить источник" HorizontalAlignment="Left" Margin="273,187,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <Button x:Name="redactIstochnik" Content="Редактировать источник" HorizontalAlignment="Left" Margin="255,229,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <Button x:Name="addvibros" Content="Добавить выбросы" HorizontalAlignment="Left" Margin="273,362,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <Button x:Name="delvibros" Content="Удалить выбросы" HorizontalAlignment="Left" Margin="274,407,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <Button x:Name="redactvibros" Content="Редактировать выбросы" HorizontalAlignment="Left" Margin="255,455,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button x:Name="addIstochnik" Content="Добавить источник" HorizontalAlignment="Left" Margin="269,89,0,0" VerticalAlignment="Top" Grid.Column="1" Click="addIstochnik_Click" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF99D24A"/>
+        <Button x:Name="delIstochnik" Content="Удалить источник" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="269,131,0,0" Grid.Column="1" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF99D24A" Click="delIstochnik_Click"/>
+        <Button x:Name="redactIstochnik" Content="Редактировать источник" Margin="269,173,23,0" VerticalAlignment="Top" Grid.Column="1" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF99D24A"/>
+        <Button x:Name="addvibros" Content="Добавить выбросы" HorizontalAlignment="Left" Margin="269,373,0,0" VerticalAlignment="Top" Grid.Column="1" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}"/>
+        <Button x:Name="delvibros" Content="Удалить выбросы" HorizontalAlignment="Left" Margin="269,425,0,0" VerticalAlignment="Top" Grid.Column="1" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}"/>
+        <Button x:Name="redactvibros" Content="Редактировать выбросы" HorizontalAlignment="Left" Margin="269,478,0,0" VerticalAlignment="Top" Grid.Column="1" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}"/>
         <DataGrid x:Name="table_1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,89,212,316" SelectionChanged="table_1_SelectionChanged" Grid.ColumnSpan="2">
             <DataGrid.Resources>
                 <col:ArrayList x:Key="Vibrosi">
                     <DataGridTextColumn Header="Номер выброса" Binding="{Binding Path=ID_Emission}" Width="90" />
                     <DataGridHyperlinkColumn Header="Номер источника выброса" Binding="{Binding Path=ID_Souce}" Width="80" />
-                    <DataGridTextColumn Header="Количество" Binding="{Binding Path=Count}" Width="50" />
-                    <DataGridTextColumn Header="Описание" Binding="{Binding Path=Text}" Width="500"  MinWidth="500"/>
+                    <DataGridTextColumn Header="Количество выбросов" Binding="{Binding Path=Count}" Width="50" />
+                    <DataGridTextColumn Header="Комментарий" Binding="{Binding Path=Text}" Width="500"  MinWidth="500"/>
                     <DataGridTextColumn Header="Дата" Binding="{Binding Path=date}" Width="50" />
                 </col:ArrayList>
             </DataGrid.Resources>
@@ -57,10 +57,13 @@
             <DataGrid.Resources>
                 <col:ArrayList x:Key="Vibrosi">
                     <DataGridHyperlinkColumn Header="Номер источника выброса" Binding="{Binding Path=ID_Souce}" Width="80" />
-                    <DataGridTextColumn Header="Источник" Binding="{Binding Path=Name}" Width="50" />
-                    <DataGridTextColumn Header="Расположение" Binding="{Binding Path=Adress}" Width="500"  MinWidth="500"/>
+                    <DataGridTextColumn Header="Название источника" Binding="{Binding Path=Name}" Width="50" />
+                    <DataGridTextColumn Header="Адрес" Binding="{Binding Path=Adress}" Width="500"  MinWidth="500"/>
                 </col:ArrayList>
             </DataGrid.Resources>
+            <DataGrid.Columns>
+                <materialDesign:DataGridComboBoxColumn/>
+            </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="minvibros" Content="Минимальные выбросы" HorizontalAlignment="Left" Margin="42,534,0,0" VerticalAlignment="Top"/>
         <Button x:Name="maxvibros" Content="Максимальные выбросы" HorizontalAlignment="Left" Margin="213,534,0,0" VerticalAlignment="Top"/>
@@ -68,5 +71,6 @@
         <Label Content="Источник" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Выборы" HorizontalAlignment="Left" Margin="91,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Расчет" HorizontalAlignment="Left" Margin="177,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="redactIstochnik_Copy" Content="Редактировать источник" Margin="269,173,23,0" VerticalAlignment="Top" Grid.Column="1" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF99D24A" Click="redactIstochnik_Copy_Click"/>
     </Grid>
 </Window>
