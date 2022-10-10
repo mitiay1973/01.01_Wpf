@@ -28,11 +28,11 @@ namespace WpfApp1
 
        
 
-        private void redVibr_Click(object sender, RoutedEventArgs e)
+        private void DelVibr_Click(object sender, RoutedEventArgs e)
         {
-            int nomer_vib= Convert.ToInt32(nomer_vibrs.Text);
+            int nomer_vibs= Convert.ToInt32(nomer_vibrs.Text);
 
-            DataTable dt1 = Select("update Vibrosi set ID_Souce = "+nomer_ist+", Count = "+ kol_ist +", Text='"+com_ist +"', date='"+date_ist_ist+"' where  ID_Emission ="+nomer_vib+"");
+            DataTable dt2 = Select("DELETE FROM Vibrosi WHERE ID_Emission =" + nomer_vibs + "");
             Glavnaya glavnaya = new Glavnaya();
             glavnaya.Show();
             Close();
