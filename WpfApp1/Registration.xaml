@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Registration" Height="450" Width="800" Background="White">
+        Title="Registration" Height="450" Width="800" Background="White" Icon="/png-transparent-factory-pipe-silhouette-factory-refinery-industrial-production.png">
     <Window.Resources>
 
         <Style x:Key="FocusVisual">
@@ -91,7 +91,7 @@
                 <GradientStop Color="#FF85A45A" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label Content="Регистрация" HorizontalAlignment="Center" Margin="0,51,0,0" VerticalAlignment="Top" Height="54" Width="219" FontSize="36" FontFamily="Chiller" FontWeight="Normal">
+        <Label Content="Регистрация" HorizontalAlignment="Center" Margin="0,94,0,0" VerticalAlignment="Top" Height="54" Width="219" FontSize="36" FontFamily="Chiller" FontWeight="Normal">
             <Label.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF4ACDD0"/>
@@ -99,7 +99,7 @@
                 </LinearGradientBrush>
             </Label.Foreground>
         </Label>
-        <TextBox x:Name="parol" HorizontalAlignment="Center" Margin="0,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" FontSize="24" Height="46" Background="{x:Null}" TextChanged="parol_TextChanged">
+        <TextBox x:Name="parol" HorizontalAlignment="Left" Margin="290,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" FontSize="24" Height="46" Background="{x:Null}" TextChanged="parol_TextChanged">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Red"/>
@@ -107,9 +107,9 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Label Content="Логин" HorizontalAlignment="Center" Margin="0,85,0,0" VerticalAlignment="Top" Height="45" Width="82" FontSize="36" FontFamily="Mistral" Foreground="#FFEAEC54"/>
+        <Label Content="Логин" HorizontalAlignment="Center" Margin="0,131,0,0" VerticalAlignment="Top" Height="45" Width="82" FontSize="36" FontFamily="Mistral" Foreground="#FFEAEC54"/>
 
-        <TextBox x:Name="login" HorizontalAlignment="Center" Margin="0,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" FontSize="24" Height="46" TextChanged="login_TextChanged" Background="{x:Null}">
+        <TextBox x:Name="login" HorizontalAlignment="Center" Margin="0,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" FontSize="24" Height="46" TextChanged="login_TextChanged" Background="{x:Null}">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Red"/>
@@ -117,8 +117,9 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Button x:Name="registration" Style="{DynamicResource DefaultButtonStyle}" Content="Зарегистрироваться" HorizontalAlignment="Center" Margin="0,296,0,0" VerticalAlignment="Top" Click="registration_Click" Height="67" Width="293" FontFamily="Mistral" FontSize="36" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFEAEC54"/>
-        <Label Content="Пароль" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Width="96" FontSize="36" FontFamily="Mistral" Foreground="#FFEAEC54" Margin="0,185,0,0"/>
+        <Button x:Name="registration" Style="{DynamicResource DefaultButtonStyle}" Content="Зарегистрироваться" HorizontalAlignment="Center" Margin="0,309,0,0" VerticalAlignment="Top" Click="registration_Click" Height="67" Width="292" FontFamily="Mistral" FontSize="36" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFEAEC54"/>
+        <Label Content="Пароль" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Width="96" FontSize="36" FontFamily="Mistral" Foreground="#FFEAEC54" Margin="0,221,0,0"/>
+        <Image HorizontalAlignment="Center" Height="84" Margin="0,13,0,0" VerticalAlignment="Top" Width="206" IsEnabled="False" Source="/png-transparent-factory-pipe-silhouette-factory-refinery-industrial-production-PhotoRoom (1).png"/>
 
     </Grid>
 </Window>

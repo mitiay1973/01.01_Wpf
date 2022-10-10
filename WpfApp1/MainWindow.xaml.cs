@@ -1,19 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WpfApp1
 {
@@ -49,23 +38,23 @@ namespace WpfApp1
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand("select COUNT(*) from Users", connection);
-                int n= Convert.ToInt32(command.ExecuteScalar().ToString());
+                int n = Convert.ToInt32(command.ExecuteScalar().ToString());
                 for (int i = 1; i <= n; i++)
                 {
                     SqlCommand command1 = new SqlCommand("SELECT [Login] FROM [dbo].[Users] WHERE [ID_User] = " + i + "", connection);
                     log = command1.ExecuteScalar().ToString();
-                        if(log==login.Text)
-                        {
-                            int h = i;
-                                SqlCommand command2 = new SqlCommand("SELECT [Password] FROM [dbo].[Users] WHERE [ID_User] = " + h + "", connection);
-                                par = command2.ExecuteScalar().ToString();
+                    if (log == login.Text)
+                    {
+                        int h = i;
+                        SqlCommand command2 = new SqlCommand("SELECT [Password] FROM [dbo].[Users] WHERE [ID_User] = " + h + "", connection);
+                        par = command2.ExecuteScalar().ToString();
                         if (par == parol.Text)
                         {
                             Glavnaya glavnaya = new Glavnaya();
                             glavnaya.Show();
                             Close();
                             break;
-                        
+
                         }
                     }
                     else
@@ -73,7 +62,7 @@ namespace WpfApp1
                         MessageBox.Show("Проверьте введенные данные");
                     }
                 }
-            }         
+            }
         }
 
         public void registr_Click(object sender, RoutedEventArgs e)
