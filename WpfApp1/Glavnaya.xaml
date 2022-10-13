@@ -1,4 +1,4 @@
-﻿<Window
+<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -10,8 +10,8 @@
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black"/>
-                <GradientStop Color="#FF85A45A" Offset="1"/>
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF7E9B55" Offset="0"/>
             </LinearGradientBrush>
         </Grid.Background>
         <Grid.ColumnDefinitions>
@@ -36,13 +36,13 @@
         </ComboBox>
         <Label Content="Источник выбросов" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top"/>
         <Label Content="Выбросы" HorizontalAlignment="Left" Margin="13,286,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="addIstochnik" Content="Добавить источник" HorizontalAlignment="Left" Margin="269,89,0,0" VerticalAlignment="Top" Grid.Column="1" Click="addIstochnik_Click" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF99D24A"/>
-        <Button x:Name="delIstochnik" Content="Удалить источник" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="269,131,0,0" Grid.Column="1" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF99D24A" Click="delIstochnik_Click"/>
-        <Button x:Name="redactIstochnik" Content="Редактировать источник" Margin="269,173,23,0" VerticalAlignment="Top" Grid.Column="1" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF99D24A"/>
-        <Button x:Name="addvibros" Content="Добавить выбросы" HorizontalAlignment="Left" Margin="269,373,0,0" VerticalAlignment="Top" Grid.Column="1" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}"/>
-        <Button x:Name="delvibros" Content="Удалить выбросы" HorizontalAlignment="Left" Margin="269,425,0,0" VerticalAlignment="Top" Grid.Column="1" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}"/>
-        <Button x:Name="redactvibros" Content="Редактировать выбросы" HorizontalAlignment="Left" Margin="269,478,0,0" VerticalAlignment="Top" Grid.Column="1" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}"/>
-        <DataGrid x:Name="table_1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,89,212,316" SelectionChanged="table_1_SelectionChanged" Grid.ColumnSpan="2">
+        <Button x:Name="addIstochnik" Content="Добавить источник" HorizontalAlignment="Left" Margin="256,89,0,0" VerticalAlignment="Top" Grid.Column="1" Click="addIstochnik_Click" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontSize="14"/>
+        <Button x:Name="delIstochnik" Content="Удалить источник" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="256,129,0,0" Grid.Column="1" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" Click="delIstochnik_Click" FontSize="14" Height="21" Width="121"/>
+        <Button x:Name="redactIstochnik" Content="Редактировать источник" Margin="256,169,10,0" VerticalAlignment="Top" Grid.Column="1" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontSize="14"/>
+        <Button x:Name="addvibros" Content="Добавить выбросы" HorizontalAlignment="Left" Margin="256,316,0,0" VerticalAlignment="Top" Grid.Column="1" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontSize="14"/>
+        <Button x:Name="delvibros" Content="Удалить выбросы" HorizontalAlignment="Left" Margin="256,356,0,0" VerticalAlignment="Top" Grid.Column="1" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontSize="14"/>
+        <Button x:Name="redactvibros" Content="Редактировать выбросы" HorizontalAlignment="Left" Margin="256,396,0,0" VerticalAlignment="Top" Grid.Column="1" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontSize="14"/>
+        <DataGrid x:Name="table_1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,89,212,316" SelectionChanged="table_1_SelectionChanged" Grid.ColumnSpan="2" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455">
             <DataGrid.Resources>
                 <col:ArrayList x:Key="Vibrosi">
                     <DataGridTextColumn Header="Номер выброса" Binding="{Binding Path=ID_Emission}" Width="90" />
@@ -53,7 +53,7 @@
                 </col:ArrayList>
             </DataGrid.Resources>
         </DataGrid>
-        <DataGrid x:Name="table_2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="13,317,209,88" SelectionChanged="table_1_SelectionChanged" Grid.ColumnSpan="2">
+        <DataGrid x:Name="table_2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="13,317,209,88" SelectionChanged="table_1_SelectionChanged" Grid.ColumnSpan="2" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455">
             <DataGrid.Resources>
                 <col:ArrayList x:Key="Vibrosi">
                     <DataGridHyperlinkColumn Header="Номер источника выброса" Binding="{Binding Path=ID_Souce}" Width="80" />
@@ -65,12 +65,11 @@
                 <materialDesign:DataGridComboBoxColumn/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="minvibros" Content="Минимальные выбросы" HorizontalAlignment="Left" Margin="42,534,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="maxvibros" Content="Максимальные выбросы" HorizontalAlignment="Left" Margin="213,534,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="sredvibros" Content="Средние выбросы" HorizontalAlignment="Left" Margin="24,534,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button x:Name="minvibros" Content="Минимальные выбросы" HorizontalAlignment="Left" Margin="18,534,0,0" VerticalAlignment="Top" Foreground="#FFE4A455" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16"/>
+        <Button x:Name="maxvibros" Content="Максимальные выбросы" HorizontalAlignment="Left" Margin="213,534,0,0" VerticalAlignment="Top" Foreground="#FFE4A455" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" Grid.ColumnSpan="2" Width="187"/>
+        <Button x:Name="sredvibros" Content="Средние выбросы" HorizontalAlignment="Left" Margin="55,534,0,0" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFE4A455" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16"/>
         <Label Content="Источник" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Выборы" HorizontalAlignment="Left" Margin="91,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Расчет" HorizontalAlignment="Left" Margin="177,10,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="redactIstochnik_Copy" Content="Редактировать источник" Margin="269,173,23,0" VerticalAlignment="Top" Grid.Column="1" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF99D24A" Click="redactIstochnik_Copy_Click"/>
     </Grid>
 </Window>
