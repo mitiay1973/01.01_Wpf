@@ -57,6 +57,11 @@ namespace WpfApp1
                             break;
 
                         }
+                        else
+                        {
+                            MessageBox.Show("Неверный пароль");
+                            break;
+                        }
                     }
                     else
                     {
