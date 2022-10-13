@@ -99,26 +99,46 @@
                 </LinearGradientBrush>
             </Label.Foreground>
         </Label>
-        <TextBox x:Name="parol" HorizontalAlignment="Left" Margin="290,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" FontSize="24" Height="46" Background="{x:Null}" TextChanged="parol_TextChanged">
+        <TextBox x:Name="parol" HorizontalAlignment="Center" Margin="0,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" FontSize="24" Height="46" Background="{x:Null}" TextChanged="parol_TextChanged">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Red"/>
-                    <GradientStop Color="White" Offset="1"/>
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="62" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF007BFF"/>
+                    <GradientStop Color="#FF99B4D1" Offset="0.69"/>
+                    <GradientStop Color="#FF007BFF" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.37"/>
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Label Content="Логин" HorizontalAlignment="Center" Margin="0,131,0,0" VerticalAlignment="Top" Height="45" Width="82" FontSize="36" FontFamily="Mistral" Foreground="#FFEAEC54"/>
+        <Label Content="Логин" HorizontalAlignment="Center" Margin="0,139,0,0" VerticalAlignment="Top" Height="45" Width="96" FontSize="36" FontFamily="Monotype Corsiva" Foreground="#FFE4A455"/>
 
         <TextBox x:Name="login" HorizontalAlignment="Center" Margin="0,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" FontSize="24" Height="46" TextChanged="login_TextChanged" Background="{x:Null}">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Red"/>
-                    <GradientStop Color="White" Offset="1"/>
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="62" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF007BFF"/>
+                    <GradientStop Color="#FF99B4D1" Offset="0.69"/>
+                    <GradientStop Color="#FF007BFF" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.37"/>
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Button x:Name="registration" Style="{DynamicResource DefaultButtonStyle}" Content="Зарегистрироваться" HorizontalAlignment="Center" Margin="0,309,0,0" VerticalAlignment="Top" Click="registration_Click" Height="67" Width="292" FontFamily="Mistral" FontSize="36" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFEAEC54"/>
-        <Label Content="Пароль" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Width="96" FontSize="36" FontFamily="Mistral" Foreground="#FFEAEC54" Margin="0,221,0,0"/>
+        <Button x:Name="registration" Style="{DynamicResource DefaultButtonStyle}" Content="Зарегистрироваться" HorizontalAlignment="Center" Margin="0,357,0,0" VerticalAlignment="Top" Click="registration_Click" Height="67" Width="292" FontFamily="Monotype Corsiva" FontSize="36" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455"/>
+        <Label Content="Пароль" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Width="116" FontSize="36" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" Margin="0,248,0,0" RenderTransformOrigin="0.649,0.621"/>
         <Image HorizontalAlignment="Center" Height="84" Margin="0,13,0,0" VerticalAlignment="Top" Width="206" IsEnabled="False" Source="/png-transparent-factory-pipe-silhouette-factory-refinery-industrial-production-PhotoRoom (1).png"/>
 
     </Grid>

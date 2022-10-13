@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Удалить источник" Height="143" Width="217" Icon="/png-transparent-factory-pipe-silhouette-factory-refinery-industrial-production.png">
+        Title="Удалить источник" Height="259" Width="320" Icon="/png-transparent-factory-pipe-silhouette-factory-refinery-industrial-production.png">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -13,10 +13,10 @@
                 <GradientStop Color="#FF85A45A" Offset="0"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="delist" Content="Удалить" HorizontalAlignment="Left" Margin="25,86,0,0" VerticalAlignment="Top" Click="Delist_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="14"/>
-        <Button x:Name="otmist" Content="Отменить" HorizontalAlignment="Left" Margin="138,86,0,0" VerticalAlignment="Top" Click="otmist_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="14"/>
-        <Label Content="Номер источника" HorizontalAlignment="Center" Margin="0,13,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="14"/>
-        <TextBox x:Name="nomer_ist" HorizontalAlignment="Center" Margin="0,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="nomer_ist_TextChanged" >
+        <Button x:Name="delist" Content="Удалить" HorizontalAlignment="Left" Margin="10,189,0,0" VerticalAlignment="Top" Click="Delist_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="24"/>
+        <Button x:Name="otmist" Content="Отменить" HorizontalAlignment="Left" Margin="207,189,0,0" VerticalAlignment="Top" Click="otmist_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="24"/>
+        <Label Content="Номер источника" HorizontalAlignment="Left" Margin="60,15,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24"/>
+        <TextBox x:Name="nomer_ist" HorizontalAlignment="Left" Margin="92,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="nomer_ist_TextChanged" >
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>

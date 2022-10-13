@@ -100,10 +100,10 @@
                 </LinearGradientBrush>
             </Label.Foreground>
         </Label>
-        <Label Content="Логин" Margin="200,159,0,0" FontSize="36" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" HorizontalAlignment="Left" Width="98" Height="45" VerticalAlignment="Top"/>
+        <Label Content="Логин" Margin="208,164,0,0" FontSize="36" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" HorizontalAlignment="Left" Width="98" Height="45" VerticalAlignment="Top"/>
         <Image HorizontalAlignment="Left" Height="84" Margin="154,24,0,0" VerticalAlignment="Top" Width="206" IsEnabled="False" Source="/png-transparent-factory-pipe-silhouette-factory-refinery-industrial-production-PhotoRoom (1).png"/>
 
-        <TextBox x:Name="parol" HorizontalAlignment="Left" Margin="153,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" FontSize="24" Height="46" TextChanged="parol_TextChanged" Background="{x:Null}">
+        <TextBox x:Name="parol" HorizontalAlignment="Left" Margin="153,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" FontSize="24" Height="46" TextChanged="parol_TextChanged" Background="{x:Null}">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -121,9 +121,9 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Label Content="Пароль" HorizontalAlignment="Left" Margin="202,255,0,0" VerticalAlignment="Top" Height="49" Width="110" FontSize="36" FontFamily="Monotype Corsiva" Foreground="#FFE4A455"/>
-        <Button x:Name="avtoriz" Style="{DynamicResource DefaultButtonStyle}" Content="Вход" HorizontalAlignment="Left" Margin="55,374,0,0" VerticalAlignment="Top" FontSize="36" Background="{x:Null}" Click="avtoriz_Click" Width="87" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontFamily="Monotype Corsiva" Height="42"/>
-        <Button x:Name="registr" Style="{DynamicResource DefaultButtonStyle}" Content="Регистрация" HorizontalAlignment="Left" Margin="371,374,0,0" VerticalAlignment="Top" FontSize="36" Background="{x:Null}" Click="registr_Click" Width="182" BorderBrush="{x:Null}" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" BorderThickness="0,1,0,0" Height="49"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="202,265,0,0" VerticalAlignment="Top" Height="49" Width="110" FontSize="36" FontFamily="Monotype Corsiva" Foreground="#FFE4A455"/>
+        <Button x:Name="avtoriz" Style="{DynamicResource DefaultButtonStyle}" Content="Вход" HorizontalAlignment="Left" Margin="54,381,0,0" VerticalAlignment="Top" FontSize="36" Background="{x:Null}" Click="avtoriz_Click" Width="87" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontFamily="Monotype Corsiva" Height="42"/>
+        <Button x:Name="registr" Style="{DynamicResource DefaultButtonStyle}" Content="Регистрация" HorizontalAlignment="Left" Margin="367,378,0,0" VerticalAlignment="Top" FontSize="36" Background="{x:Null}" Click="registr_Click" Width="182" BorderBrush="{x:Null}" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" BorderThickness="0,1,0,0" Height="48"/>
         <TextBox x:Name="login" Margin="153,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Height="46" TextChanged="parol_TextChanged" Background="{x:Null}" HorizontalAlignment="Left" Width="208" RenderTransformOrigin="0.5,0.5">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" SpreadMethod="Repeat" MappingMode="RelativeToBoundingBox">
