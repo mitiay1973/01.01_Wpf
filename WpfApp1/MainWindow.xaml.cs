@@ -61,6 +61,7 @@ namespace WpfApp1
                     else
                     {
                         MessageBox.Show("Проверьте введенные данные");
+                        break;
                     }
                 }
             }
