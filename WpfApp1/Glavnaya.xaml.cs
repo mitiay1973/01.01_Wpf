@@ -27,22 +27,36 @@ namespace WpfApp1
 
                 for (int i = 1; i <= n; i++)
                 {
-                    SqlCommand command1 = new SqlCommand("select ID_Souce FROM Vibrosi WHERE ID_Emission=" + i + "", connection);  
+                    SqlCommand command1 = new SqlCommand("select ID_Souce FROM Vibrosi WHERE ID_Emission=" + i + "", connection);
+                    if (command1.ExecuteScalar() is null)
+                    {
+                   
+                    }
+                    else
+                    {
                         id[i - 1] = Convert.ToInt32(command1.ExecuteScalar().ToString());
                         SqlCommand command2 = new SqlCommand("select Count FROM Vibrosi WHERE ID_Emission=" + i + "", connection);
                         count[i - 1] = float.Parse(command2.ExecuteScalar().ToString());
                         SqlCommand command3 = new SqlCommand("select Text FROM Vibrosi WHERE ID_Emission=" + i + "", connection);
                         text[i - 1] = Convert.ToString(command3.ExecuteScalar().ToString());
                         SqlCommand command4 = new SqlCommand("select date FROM Vibrosi WHERE ID_Emission=" + i + "", connection);
-                        Date[i - 1] = Convert.ToString(command4.ExecuteScalar().ToString());                  
+                        Date[i - 1] = Convert.ToString(command4.ExecuteScalar().ToString());
+                    }
                 }
                 List<Vibros> vibrosList = new List<Vibros>
                 {
 
                 };
-                for (int i = 0; i < n; i++)
+                for (int i = 1; i <= n; i++)
                 {
-                            vibrosList.Add(new Vibros { ID_Emission = i + 1, ID_Souce = id[i], Count = count[i], Text = text[i], date = Date[i] });
+                        if (Date[i - 1]==null)
+                        {
+
+                        }
+                        else
+                        {
+                            vibrosList.Add(new Vibros { ID_Emission = i, ID_Souce = id[i-1], Count = count[i-1], Text = text[i-1], date = Date[i-1] });
+                        }                    
                 }
                 
                 table_1.ItemsSource = vibrosList;
