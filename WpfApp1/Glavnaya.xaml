@@ -42,7 +42,7 @@
         <Button x:Name="addvibros" Content="Добавить выбросы" HorizontalAlignment="Left" Margin="256,316,0,0" VerticalAlignment="Top" Grid.Column="1" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontSize="14"/>
         <Button x:Name="delvibros" Content="Удалить выбросы" HorizontalAlignment="Left" Margin="256,356,0,0" VerticalAlignment="Top" Grid.Column="1" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontSize="14"/>
         <Button x:Name="redactvibros" Content="Редактировать выбросы" HorizontalAlignment="Left" Margin="256,396,0,0" VerticalAlignment="Top" Grid.Column="1" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontSize="14"/>
-        <DataGrid x:Name="table_1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,89,212,316" SelectionChanged="table_1_SelectionChanged" Grid.ColumnSpan="2" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455">
+        <DataGrid x:Name="table_1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,89,212,316" SelectionChanged="table_1_SelectionChanged" Grid.ColumnSpan="2" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black">
             <DataGrid.Resources>
                 <col:ArrayList x:Key="Vibrosi">
                     <DataGridTextColumn Header="Номер выброса" Binding="{Binding Path=ID_Emission}" Width="90" />
@@ -53,7 +53,7 @@
                 </col:ArrayList>
             </DataGrid.Resources>
         </DataGrid>
-        <DataGrid x:Name="table_2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="13,317,209,88" SelectionChanged="table_1_SelectionChanged" Grid.ColumnSpan="2" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455">
+        <DataGrid x:Name="table_2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="13,317,209,88" SelectionChanged="table_1_SelectionChanged" Grid.ColumnSpan="2" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black">
             <DataGrid.Resources>
                 <col:ArrayList x:Key="Vibrosi">
                     <DataGridHyperlinkColumn Header="Номер источника выброса" Binding="{Binding Path=ID_Souce}" Width="80" />
