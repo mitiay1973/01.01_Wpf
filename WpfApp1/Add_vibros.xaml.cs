@@ -52,15 +52,7 @@ namespace WpfApp1
             int kol = Convert.ToInt32(count.Text);
             string com = comment.Text;
             string date_ist = date.Text;
-            int a;
-            using (SqlConnection connection = new SqlConnection("server=ngknn.ru;Trusted_Connection=No;DataBase=43p_rad_Sor_Man;User=33П;PWD=12357"))
-            {
-                connection.Open();
-                SqlCommand commands = new SqlCommand("select max(ID_Emission) from Vibrosi", connection);
-                a=Convert.ToInt32(commands.ExecuteScalar().ToString());
-                a++;
-            }
-                DataTable dt = Select("insert into Vibrosi (ID_Emission, ID_Souce, Count, Text, date) values ('"+a+"','" + nomer_ist + "','" + kol + "','"+com+"','"+date_ist+"');");
+            DataTable dt = Select("insert into Vibrosi ( ID_Souce, Count, Text, date) values ('" + nomer_ist + "','" + kol + "','"+com+"','"+date_ist+"');");
             Glavnaya glavnaya = new Glavnaya();
             glavnaya.Show();
             Close();
