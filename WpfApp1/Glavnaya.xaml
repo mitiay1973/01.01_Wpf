@@ -71,5 +71,11 @@
         <Label Content="Источник" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Выборы" HorizontalAlignment="Left" Margin="91,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Расчет" HorizontalAlignment="Left" Margin="177,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Close" Content="" HorizontalAlignment="Left" Margin="374,-6,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="35" Width="63" Click="Button_Click" Grid.Column="1">
+            <Button.Background>
+                <ImageBrush ImageSource="/button_photo1-PhotoRoom (2)-PhotoRoom (1).png"/>
+            </Button.Background>
+
+        </Button>
     </Grid>
 </Window>
