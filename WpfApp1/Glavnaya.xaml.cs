@@ -63,8 +63,8 @@ namespace WpfApp1
             }
             using (SqlConnection connection = new SqlConnection("server=ngknn.ru;Trusted_Connection=No;DataBase=43p_rad_Sor_Man;User=33П;PWD=12357"))
             {
-                SqlCommand commandd = new SqlCommand("select Count(*) from Istochniki", connection);
                 connection.Open();
+                SqlCommand commandd = new SqlCommand("select max(ID_Source) from Istochniki", connection);
                 int n = Convert.ToInt32(commandd.ExecuteScalar().ToString());
                 string[] name = new string[n];
                 string[] adress = new string[n];
@@ -72,18 +72,32 @@ namespace WpfApp1
                 for (int i = 1; i <= n; i++)
                 {
                     SqlCommand commandd1 = new SqlCommand("select Name FROM Istochniki WHERE ID_Source=" + i + "", connection);
-                    name[i - 1] = Convert.ToString(commandd1.ExecuteScalar().ToString());
-                    SqlCommand commandd2 = new SqlCommand("select Adress FROM Istochniki WHERE ID_Source=" + i + "", connection);
-                    adress[i - 1] = Convert.ToString(commandd2.ExecuteScalar().ToString());
+                    if (commandd1.ExecuteScalar() is null)
+                    {
+
+                    }
+                    else
+                    {
+                        
+                        name[i - 1] = Convert.ToString(commandd1.ExecuteScalar().ToString());
+                        SqlCommand commandd2 = new SqlCommand("select Adress FROM Istochniki WHERE ID_Source=" + i + "", connection);
+                        adress[i - 1] = Convert.ToString(commandd2.ExecuteScalar().ToString());
+                    }
                 }
                 List<Istochniki> istochnikList = new List<Istochniki>
                 {
 
                 };
-                for (int i = 0; i < n; i++)
+                for (int i = 1; i <= n; i++)
                 {
+                    if (name[i - 1] == null)
+                    {
 
-                    istochnikList.Add(new Istochniki { ID_Souce = i + 1, Name=name[i], Adress = adress[i] });
+                    }
+                    else
+                    {
+                        istochnikList.Add(new Istochniki { ID_Souce = i, Name = name[i-1], Adress = adress[i-1] });
+                    }
                 }
                 table_2.ItemsSource = istochnikList;
             }
