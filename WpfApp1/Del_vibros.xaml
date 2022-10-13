@@ -9,27 +9,30 @@
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black"/>
-                <GradientStop Color="#FF85A45A" Offset="1"/>
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF85A45A" Offset="0"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="delVibr" Content="Удалить" HorizontalAlignment="Left" Margin="25,86,0,0" VerticalAlignment="Top" Click="DelVibr_Click" FontFamily="Bahnschrift" BorderBrush="{x:Null}" Background="{x:Null}">
-            <Button.Foreground>
+        <Button x:Name="delVibr" Content="Удалить" HorizontalAlignment="Left" Margin="25,86,0,0" VerticalAlignment="Top" Click="DelVibr_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="14"/>
+        <Button x:Name="otmVibr" Content="Отменить" HorizontalAlignment="Left" Margin="138,86,0,0" VerticalAlignment="Top" Click="otmVibr_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="14"/>
+        <Label Content="Номер выброса" HorizontalAlignment="Left" Margin="60,10,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="14"/>
+        <TextBox x:Name="nomer_vibrs" HorizontalAlignment="Left" Margin="45,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="nomer_vibrs_TextChanged" >
+            <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF0D0E0C" Offset="0.61"/>
-                    <GradientStop Color="#FF84F710" Offset="0"/>
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="62" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF007BFF"/>
+                    <GradientStop Color="#FF99B4D1" Offset="0.667"/>
+                    <GradientStop Color="#FF007BFF" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.367"/>
                 </LinearGradientBrush>
-            </Button.Foreground>
-        </Button>
-        <Button x:Name="otmVibr" Content="Отменить" HorizontalAlignment="Left" Margin="138,86,0,0" VerticalAlignment="Top" Click="otmVibr_Click" FontFamily="Bahnschrift" BorderBrush="{x:Null}" Background="{x:Null}">
-            <Button.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF0D0E0C" Offset="0.61"/>
-                    <GradientStop Color="#FF84F710" Offset="0"/>
-                </LinearGradientBrush>
-            </Button.Foreground>
-        </Button>
-        <Label Content="Номер выброса" HorizontalAlignment="Left" Margin="57,10,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" Foreground="#FF99D24A"/>
-        <TextBox x:Name="nomer_vibrs" HorizontalAlignment="Left" Margin="45,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}"  BorderBrush="Black" TextChanged="nomer_vibrs_TextChanged" />
+            </TextBox.BorderBrush>
+        </TextBox>
     </Grid>
 </Window>

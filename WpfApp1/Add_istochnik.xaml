@@ -9,8 +9,8 @@
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black"/>
-                <GradientStop Color="#FF85A45A" Offset="1"/>
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF85A45A" Offset="0"/>
             </LinearGradientBrush>
         </Grid.Background>
         <Label Content="Имя" HorizontalAlignment="Left" Margin="91,27,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="20" Height="33" Width="46"/>
@@ -28,7 +28,7 @@
                     <GradientStop Color="White" Offset="0.38"/>
                     <GradientStop Color="#FF007BFF" Offset="0.86"/>
                     <GradientStop Color="#FF0078F9" Offset="0"/>
-                    <GradientStop Color="#FF99B4D1" Offset="0.65"/>
+                    <GradientStop Color="#FF99B4D1" Offset="0.66"/>
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
