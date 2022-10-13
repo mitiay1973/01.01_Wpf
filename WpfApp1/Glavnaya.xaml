@@ -19,9 +19,9 @@
         </Grid.ColumnDefinitions>
 
         <ComboBox x:Name="istok" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Width="76" Background="{x:Null}" Foreground="{x:Null}" BorderBrush="{x:Null}">
-            <Button Background="#FFCEF192" Content="Добавить" HorizontalAlignment="Center" RenderTransformOrigin="0.5,1" VerticalAlignment="Center" Click="addvibros_Click"/>
-            <Button Background="#FFCEF192" Content="Удалить" HorizontalAlignment="Center" RenderTransformOrigin="0.5,1" VerticalAlignment="Center" Click="delvibros_Click"/>
-            <Button Background="#FFCEF192" Content="Редактировать" HorizontalAlignment="Center" RenderTransformOrigin="0.5,1" VerticalAlignment="Center" Click="redactIstochnik_Click"/>
+            <Button Background="#FFCEF192" Focusable="False" Content="Добавить" HorizontalAlignment="Center" RenderTransformOrigin="0.5,1" VerticalAlignment="Center" Click="addvibros_Click"/>
+            <Button Background="#FFCEF192" Focusable="False" Content="Удалить" HorizontalAlignment="Center" RenderTransformOrigin="0.5,1" VerticalAlignment="Center" Click="delvibros_Click"/>
+            <Button Background="#FFCEF192" Focusable="False" Content="Редактировать" HorizontalAlignment="Center" RenderTransformOrigin="0.5,1" VerticalAlignment="Center" Click="redactIstochnik_Click"/>
         </ComboBox>
         <ComboBox x:Name="rash" HorizontalAlignment="Left" Margin="170,14,0,0" VerticalAlignment="Top" Width="76" Background="{x:Null}" Foreground="{x:Null}" BorderBrush="{x:Null}">
             <Button Background="#FFCEF192" Content="Минимальные выбросы" HorizontalAlignment="Center" RenderTransformOrigin="0.5,1" VerticalAlignment="Center" Click="minvibros_Click"/>

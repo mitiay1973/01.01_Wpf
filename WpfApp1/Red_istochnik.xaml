@@ -13,8 +13,8 @@
                 <GradientStop Color="#FF85A45A" Offset="0"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label Content="Номер источника" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24" Height="35"/>
-        <TextBox x:Name="nomer" HorizontalAlignment="Center" Margin="0,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="nomer_TextChanged">
+        <Label Content="Номер источника" HorizontalAlignment="Center" Margin="0,34,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24" Height="35"/>
+        <TextBox x:Name="nomer" HorizontalAlignment="Center" Margin="0,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" FontSize="20" Height="24"  Background="{x:Null}" TextChanged="nomer_TextChanged" Foreground="White">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -32,8 +32,8 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Label Content="Имя" HorizontalAlignment="Center" Margin="0,108,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24" RenderTransformOrigin="0.462,0.309" Height="32" Width="60"/>
-        <TextBox x:Name="name" HorizontalAlignment="Center" Margin="0,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="name_TextChanged">
+        <Label Content="Имя" HorizontalAlignment="Center" Margin="0,111,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24" RenderTransformOrigin="0.462,0.309" Height="32" Width="60"/>
+        <TextBox x:Name="name" HorizontalAlignment="Center" Margin="0,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontSize="20" Height="24"  Background="{x:Null}" TextChanged="name_TextChanged" Foreground="White">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -51,8 +51,8 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Label Content="Адрес" HorizontalAlignment="Left" Margin="106,176,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24" Height="40" Width="71"/>
-        <TextBox x:Name="adress" HorizontalAlignment="Center" Margin="0,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="adress_TextChanged">
+        <Label Content="Адрес" HorizontalAlignment="Center" Margin="0,182,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24" Height="40" Width="71"/>
+        <TextBox x:Name="adress" HorizontalAlignment="Center" Margin="0,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontSize="20" Height="24"  Background="{x:Null}" TextChanged="adress_TextChanged" Foreground="White">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>

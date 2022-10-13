@@ -13,8 +13,8 @@
                 <GradientStop Color="#FF85A45A" Offset="0"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label Content="Номер источника" HorizontalAlignment="Center" Margin="0,14,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24"/>
-        <TextBox x:Name="nomer" HorizontalAlignment="Center" Margin="0,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="nomer_TextChanged">
+        <Label Content="Номер источника" HorizontalAlignment="Center" Margin="0,9,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24"/>
+        <TextBox x:Name="nomer" HorizontalAlignment="Center" Margin="0,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" FontSize="20" Height="25"  Background="{x:Null}" TextChanged="nomer_TextChanged" Foreground="White">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -32,8 +32,8 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Label Content="Количество выбросов" HorizontalAlignment="Center" Margin="0,85,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24"/>
-        <TextBox x:Name="count" HorizontalAlignment="Center" Margin="0,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="count_TextChanged">
+        <Label Content="Количество выбросов" HorizontalAlignment="Center" Margin="0,77,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24"/>
+        <TextBox x:Name="count" HorizontalAlignment="Center" Margin="0,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" FontSize="20" Height="30"  Background="{x:Null}" TextChanged="count_TextChanged" Foreground="White">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -51,8 +51,8 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Label Content="Коментарий" HorizontalAlignment="Center" Margin="0,151,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24"/>
-        <TextBox x:Name="comment" HorizontalAlignment="Center" Margin="0,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="comment_TextChanged">
+        <Label Content="Коментарий" HorizontalAlignment="Center" Margin="0,153,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24" Height="36"/>
+        <TextBox x:Name="comment" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" FontSize="20" Height="29"  Background="{x:Null}" TextChanged="comment_TextChanged" Foreground="White" Margin="0,189,0,0">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -70,8 +70,8 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Label Content="Дата (в формате гггг-мм-дд)" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24"/>
-        <TextBox x:Name="date" HorizontalAlignment="Center" Margin="0,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="date_TextChanged">
+        <Label Content="Дата (в формате гггг-мм-дд)" HorizontalAlignment="Center" Margin="0,230,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24"/>
+        <TextBox x:Name="date" HorizontalAlignment="Center" Margin="0,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" FontSize="20" Height="30"  Background="{x:Null}" TextChanged="date_TextChanged" Foreground="White">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -89,7 +89,7 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Button x:Name="addVibr" Content="Добавить" HorizontalAlignment="Left" Margin="22,303,0,0" VerticalAlignment="Top" Click="addVibr_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="24"/>
-        <Button x:Name="otmVibr" Content="Отменить" HorizontalAlignment="Left" Margin="207,303,0,0" VerticalAlignment="Top" Click="otmVibr_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="24"/>
+        <Button x:Name="addVibr" Content="Добавить" HorizontalAlignment="Left" Margin="22,311,0,0" VerticalAlignment="Top" Click="addVibr_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="24"/>
+        <Button x:Name="otmVibr" Content="Отменить" HorizontalAlignment="Left" Margin="207,311,0,0" VerticalAlignment="Top" Click="otmVibr_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="24"/>
     </Grid>
 </Window>

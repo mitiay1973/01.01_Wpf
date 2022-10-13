@@ -16,7 +16,7 @@
         <Button x:Name="delVibr" Content="Удалить" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" Click="DelVibr_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="24"/>
         <Button x:Name="otmVibr" Content="Отменить" HorizontalAlignment="Left" Margin="198,124,0,0" VerticalAlignment="Top" Click="otmVibr_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="24"/>
         <Label Content="Номер выброса" HorizontalAlignment="Center" Margin="0,32,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24"/>
-        <TextBox x:Name="nomer_vibrs" HorizontalAlignment="Center" Margin="0,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118" FontSize="24" Height="24"  Background="{x:Null}" TextChanged="nomer_vibrs_TextChanged" >
+        <TextBox x:Name="nomer_vibrs" HorizontalAlignment="Center" Margin="0,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" FontSize="20" Height="25"  Background="{x:Null}" TextChanged="nomer_vibrs_TextChanged" Foreground="White" >
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
