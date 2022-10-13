@@ -8,6 +8,12 @@
         mc:Ignorable="d"
         Title="Максимальные выбросы" Height="450" Width="800" Icon="/png-transparent-factory-pipe-silhouette-factory-refinery-industrial-production.png">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF85A45A" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <DataGrid x:Name="table_1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="111,86,111,131" SelectionChanged="table_1_SelectionChanged" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black">
             <DataGrid.Resources>
                 <col:ArrayList x:Key="Vibrosi">
@@ -19,7 +25,7 @@
                 </col:ArrayList>
             </DataGrid.Resources>
         </DataGrid>
-        <Label Content="Максимальные выбросы" HorizontalAlignment="Left" Margin="111,52,0,0" VerticalAlignment="Top" Height="29" Width="318"/>
-        <Button x:Name="MaxClose" Content="Ок" HorizontalAlignment="Center" Margin="0,308,0,0" VerticalAlignment="Top" Height="47" Width="196" Click="MaxClose_Click"/>
+        <Label Content="Максимальные выбросы" HorizontalAlignment="Left" Margin="111,46,0,0" VerticalAlignment="Top" Height="40" Width="328" FontFamily="Bahnschrift" Foreground="#FFE4A455" FontSize="24"/>
+        <Button x:Name="MaxClose" Content="Ок" HorizontalAlignment="Center" Margin="0,303,0,0" VerticalAlignment="Top" Height="66" Width="78" Click="MaxClose_Click" Background="{x:Null}" Foreground="#FFE4A455" FontSize="48" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}"/>
     </Grid>
 </Window>
