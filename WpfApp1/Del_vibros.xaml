@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Удалить выброс" Height="143" Width="217">
+        Title="Удалить выброс" Height="143" Width="217" Icon="/png-transparent-factory-pipe-silhouette-factory-refinery-industrial-production.png">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

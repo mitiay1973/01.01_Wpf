@@ -179,6 +179,20 @@ namespace WpfApp1
         {
             Environment.Exit(0);
         }
+
+        private void minvibros_Click(object sender, RoutedEventArgs e)
+        {
+            minVibr min = new minVibr();
+            min.Show();
+            Close();
+        }
+
+        private void sredvibros_Click(object sender, RoutedEventArgs e)
+        {
+            avgVibr avg = new avgVibr();
+            avg.Show();
+            Close();
+        }
     }
 
     internal class Vibros

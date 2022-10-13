@@ -87,6 +87,12 @@
     <Compile Include="Del_vibros.xaml.cs">
       <DependentUpon>Del_vibros.xaml</DependentUpon>
     </Compile>
+    <Compile Include="avgVibr.xaml.cs">
+      <DependentUpon>avgVibr.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="minVibr.xaml.cs">
+      <DependentUpon>minVibr.xaml</DependentUpon>
+    </Compile>
     <Compile Include="maxVibr.xaml.cs">
       <DependentUpon>maxVibr.xaml</DependentUpon>
     </Compile>
@@ -114,6 +120,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Del_vibros.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="avgVibr.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="minVibr.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
