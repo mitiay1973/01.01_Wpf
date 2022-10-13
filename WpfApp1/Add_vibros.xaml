@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Добавить выброс" Height="377" Width="219" Icon="/png-transparent-factory-pipe-silhouette-factory-refinery-industrial-production.png">
+        Title="Добавить выброс" Height="403" Width="344" Icon="/png-transparent-factory-pipe-silhouette-factory-refinery-industrial-production.png">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -13,8 +13,8 @@
                 <GradientStop Color="#FF85A45A" Offset="0"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label Content="Номер источника" HorizontalAlignment="Left" Margin="55,30,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="14"/>
-        <TextBox x:Name="nomer" HorizontalAlignment="Left" Margin="48,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="nomer_TextChanged">
+        <Label Content="Номер источника" HorizontalAlignment="Center" Margin="0,14,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24"/>
+        <TextBox x:Name="nomer" HorizontalAlignment="Center" Margin="0,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="nomer_TextChanged">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -32,8 +32,8 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Label Content="Количество выбросов" HorizontalAlignment="Left" Margin="47,89,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="14"/>
-        <TextBox x:Name="count" HorizontalAlignment="Left" Margin="48,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="count_TextChanged">
+        <Label Content="Количество выбросов" HorizontalAlignment="Center" Margin="0,85,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24"/>
+        <TextBox x:Name="count" HorizontalAlignment="Center" Margin="0,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="count_TextChanged">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -51,8 +51,8 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Label Content="Коментарий" HorizontalAlignment="Left" Margin="68,153,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="14"/>
-        <TextBox x:Name="comment" HorizontalAlignment="Left" Margin="48,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="comment_TextChanged">
+        <Label Content="Коментарий" HorizontalAlignment="Center" Margin="0,151,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24"/>
+        <TextBox x:Name="comment" HorizontalAlignment="Center" Margin="0,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="comment_TextChanged">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -70,8 +70,8 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Label Content="Дата (в формате гггг-мм-дд)" HorizontalAlignment="Left" Margin="25,212,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="14"/>
-        <TextBox x:Name="date" HorizontalAlignment="Left" Margin="48,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="date_TextChanged">
+        <Label Content="Дата (в формате гггг-мм-дд)" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24"/>
+        <TextBox x:Name="date" HorizontalAlignment="Center" Margin="0,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="date_TextChanged">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -89,7 +89,7 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Button x:Name="addVibr" Content="Добавить" HorizontalAlignment="Left" Margin="22,303,0,0" VerticalAlignment="Top" Click="addVibr_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="14"/>
-        <Button x:Name="otmVibr" Content="Отменить" HorizontalAlignment="Left" Margin="135,303,0,0" VerticalAlignment="Top" Click="otmVibr_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="14"/>
+        <Button x:Name="addVibr" Content="Добавить" HorizontalAlignment="Left" Margin="22,303,0,0" VerticalAlignment="Top" Click="addVibr_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="24"/>
+        <Button x:Name="otmVibr" Content="Отменить" HorizontalAlignment="Left" Margin="207,303,0,0" VerticalAlignment="Top" Click="otmVibr_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="24"/>
     </Grid>
 </Window>
