@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Редактировать выброс" Height="377" Width="266" Icon="/png-transparent-factory-pipe-silhouette-factory-refinery-industrial-production.png">
+        Title="Редактировать выброс" Height="411" Width="308" Icon="/png-transparent-factory-pipe-silhouette-factory-refinery-industrial-production.png">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black"/>
-                <GradientStop Color="#FF85A45A" Offset="1"/>
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF85A45A" Offset="0"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label Content="Номер источника" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="20"/>
-        <TextBox x:Name="nomer" HorizontalAlignment="Center" Margin="0,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="nomer_TextChanged" BorderThickness="1,1,1,1">
+        <Label Content="Номер источника" HorizontalAlignment="Center" Margin="0,76,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24"/>
+        <TextBox x:Name="nomer" HorizontalAlignment="Center" Margin="0,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" FontSize="20" Height="24"  Background="{x:Null}" TextChanged="nomer_TextChanged" BorderThickness="1,1,1,1" Foreground="White">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -32,8 +32,8 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Label Content="Количество выбросов" HorizontalAlignment="Center" Margin="0,129,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="20"/>
-        <TextBox x:Name="count" HorizontalAlignment="Center" Margin="0,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="count_TextChanged" BorderThickness="1,1,1,1">
+        <Label Content="Количество выбросов" HorizontalAlignment="Center" Margin="0,139,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24"/>
+        <TextBox x:Name="count" HorizontalAlignment="Center" Margin="0,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" FontSize="20" Height="25"  Background="{x:Null}" TextChanged="count_TextChanged" BorderThickness="1,1,1,1" Foreground="White">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -51,8 +51,8 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Label Content="Коментарий" HorizontalAlignment="Center" Margin="0,188,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="20"/>
-        <TextBox x:Name="comment" HorizontalAlignment="Center" Margin="0,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="comment_TextChanged" BorderThickness="1,1,1,1">
+        <Label Content="Коментарий" HorizontalAlignment="Center" Margin="0,211,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24"/>
+        <TextBox x:Name="comment" HorizontalAlignment="Center" Margin="0,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" FontSize="20" Height="24"  Background="{x:Null}" TextChanged="comment_TextChanged" BorderThickness="1,1,1,1" Foreground="White">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -70,8 +70,8 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Label Content="Дата (в формате гггг-мм-дд)" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="20"/>
-        <TextBox x:Name="date" HorizontalAlignment="Center" Margin="0,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="date_TextChanged" BorderThickness="1,1,1,1">
+        <Label Content="Дата (в формате гггг-мм-дд)" HorizontalAlignment="Center" Margin="0,271,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24"/>
+        <TextBox x:Name="date" HorizontalAlignment="Center" Margin="0,306,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" FontSize="20" Height="24"  Background="{x:Null}" TextChanged="date_TextChanged" BorderThickness="1,1,1,1" Foreground="White">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -89,10 +89,10 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Button x:Name="redVibr" Content="Изменить" HorizontalAlignment="Left" Margin="10,325,0,0" VerticalAlignment="Top" Click="redVibr_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="20"/>
-        <Button x:Name="otmVibr" Content="Отменить" HorizontalAlignment="Left" Margin="169,325,0,0" VerticalAlignment="Top" Click="otmVibr_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="20"/>
-        <Label Content="Номер выброса" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="20"/>
-        <TextBox x:Name="nomer_vibr" HorizontalAlignment="Center" Margin="0,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}" TextChanged="nomer_vibr_TextChanged" BorderThickness="1,1,1,1">
+        <Button x:Name="redVibr" Content="Изменить" HorizontalAlignment="Left" Margin="10,335,0,0" VerticalAlignment="Top" Click="redVibr_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="24"/>
+        <Button x:Name="otmVibr" Content="Отменить" HorizontalAlignment="Left" Margin="186,335,0,0" VerticalAlignment="Top" Click="otmVibr_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="24"/>
+        <Label Content="Номер выброса" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="24"/>
+        <TextBox x:Name="nomer_vibr" HorizontalAlignment="Center" Margin="0,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" FontSize="20" Height="27"  Background="{x:Null}" TextChanged="nomer_vibr_TextChanged" BorderThickness="1,1,1,1" Foreground="White">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
