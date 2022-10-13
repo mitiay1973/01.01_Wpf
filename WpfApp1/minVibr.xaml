@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="Минимальные выбросы" Height="450" Width="800">
+        Title="Минимальные выбросы" Height="450" Width="800" Icon="/png-transparent-factory-pipe-silhouette-factory-refinery-industrial-production.png">
     <Grid>
         <DataGrid x:Name="table_1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="111,86,111,131" SelectionChanged="table_1_SelectionChanged" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black">
             <DataGrid.Resources>
