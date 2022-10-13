@@ -32,7 +32,7 @@ namespace WpfApp1
         {
             int nomer_istoc= Convert.ToInt32(nomer_ist.Text);
 
-            DataTable dt2 = Select("DELETE FROM Istochniki WHERE ID_Source ='" + nomer_ist + "'");
+            DataTable dt2 = Select("DELETE FROM Istochniki WHERE ID_Source ='" + nomer_istoc + "'");
             Glavnaya glavnaya = new Glavnaya();
             glavnaya.Show();
             Close();

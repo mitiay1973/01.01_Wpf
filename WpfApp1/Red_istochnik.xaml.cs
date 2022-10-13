@@ -39,7 +39,7 @@ namespace WpfApp1
             int nomer_ist = Convert.ToInt32(nomer.Text);       
             string Name = name.Text;
             string Adress = adress.Text;
-            DataTable dt1 = Select("update Vibrosi set Name = '" + Name + "',  Adress='" + Adress + "' where  ID_Souce =" + nomer_ist+"");
+            DataTable dt1 = Select("update Istochniki set Name = '" + Name + "',  Adress='" + Adress + "' where  ID_Source =" + nomer_ist+"");
             Glavnaya glavnaya = new Glavnaya();
             glavnaya.Show();
             Close();

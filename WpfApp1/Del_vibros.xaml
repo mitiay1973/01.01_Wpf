@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Удалить источник" Height="143" Width="217">
+        Title="Удалить выброс" Height="143" Width="217">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -29,7 +29,7 @@
                 </LinearGradientBrush>
             </Button.Foreground>
         </Button>
-        <Label Content="Номер источника" HorizontalAlignment="Left" Margin="57,10,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" Foreground="#FF99D24A"/>
+        <Label Content="Номер выброса" HorizontalAlignment="Left" Margin="57,10,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" Foreground="#FF99D24A"/>
         <TextBox x:Name="nomer_vibrs" HorizontalAlignment="Left" Margin="45,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}"  BorderBrush="Black" TextChanged="nomer_vibrs_TextChanged" />
     </Grid>
 </Window>
