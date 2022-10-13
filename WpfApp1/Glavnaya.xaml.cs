@@ -142,6 +142,13 @@ namespace WpfApp1
             Rvibr.Show();
             Close();
         }
+
+        private void addvibros_Click(object sender, RoutedEventArgs e)
+        {
+            Add_istochnik ist = new Add_istochnik();
+            ist.Show();
+            Close();
+        }
     }
 
     internal class Vibros
