@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApp1.maxVibr"
+﻿<Window x:Class="WpfApp1.minVibr"
        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="Максимальные выбросы" Height="450" Width="800">
+        Title="Минимальные выбросы" Height="450" Width="800">
     <Grid>
         <DataGrid x:Name="table_1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="111,86,111,131" SelectionChanged="table_1_SelectionChanged" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black">
             <DataGrid.Resources>
@@ -19,7 +19,7 @@
                 </col:ArrayList>
             </DataGrid.Resources>
         </DataGrid>
-        <Label Content="Максимальные выбросы" HorizontalAlignment="Left" Margin="111,52,0,0" VerticalAlignment="Top" Height="29" Width="318"/>
-        <Button x:Name="MaxClose" Content="Ок" HorizontalAlignment="Center" Margin="0,308,0,0" VerticalAlignment="Top" Height="47" Width="196" Click="MaxClose_Click"/>
+        <Label Content="Минимальные выбросы" HorizontalAlignment="Left" Margin="111,52,0,0" VerticalAlignment="Top" Height="29" Width="318"/>
+        <Button x:Name="MinClose" Content="Ок" HorizontalAlignment="Center" Margin="0,308,0,0" VerticalAlignment="Top" Height="47" Width="196" Click="MinClose_Click"/>
     </Grid>
 </Window>
