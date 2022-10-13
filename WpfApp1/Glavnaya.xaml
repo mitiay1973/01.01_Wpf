@@ -61,24 +61,16 @@
                 </col:ArrayList>
             </DataGrid.Resources>
             <DataGrid.Columns>
-                <materialDesign:DataGridComboBoxColumn/>
+               
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="minvibros" Content="Минимальные выбросы" HorizontalAlignment="Left" Margin="18,534,0,0" VerticalAlignment="Top" Foreground="#FFE4A455" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16"/>
-        <Button x:Name="maxvibros" Content="Максимальные выбросы" HorizontalAlignment="Left" Margin="213,534,0,0" VerticalAlignment="Top" Foreground="#FFE4A455" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" Grid.ColumnSpan="2" Width="187" Click="maxvibros_Click"/>
-        <Button x:Name="sredvibros" Content="Средние выбросы" HorizontalAlignment="Left" Margin="55,534,0,0" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFE4A455" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16"/>
         <Button x:Name="minvibros" Content="Минимальные выбросы" HorizontalAlignment="Left" Margin="20,466,0,0" VerticalAlignment="Top" Foreground="#FFE4A455" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" FontWeight="Bold"/>
-        <Button x:Name="maxvibros" Content="Максимальные выбросы" HorizontalAlignment="Left" Margin="231,466,0,0" VerticalAlignment="Top" Foreground="#FFE4A455" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" Width="203" FontWeight="Bold"/>
+        <Button x:Name="maxvibros" Content="Максимальные выбросы" HorizontalAlignment="Left" Margin="231,466,0,0" VerticalAlignment="Top" Foreground="#FFE4A455" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" Width="203" FontWeight="Bold" Click="maxvibros_Click"/>
         <Button x:Name="sredvibros" Content="Средние выбросы" HorizontalAlignment="Left" Margin="448,466,0,0" VerticalAlignment="Top" Foreground="#FFE4A455" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" FontWeight="Bold"/>
         <Label Content="Источник" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Выборы" HorizontalAlignment="Left" Margin="91,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Расчет" HorizontalAlignment="Left" Margin="177,10,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="Close" Content="" HorizontalAlignment="Left" Margin="374,-6,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="35" Width="63" Click="Button_Click" Grid.Column="1">
-            <Button.Background>
-                <ImageBrush ImageSource="/button_photo1-PhotoRoom (2)-PhotoRoom (1).png"/>
-            </Button.Background>
-
-        </Button>
+        
         <Button Content="" HorizontalAlignment="Left" Margin="739,3,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="35" Width="63" Click="Button_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/button_photo1-PhotoRoom (2).png"/>
