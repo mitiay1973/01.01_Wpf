@@ -81,8 +81,14 @@
     <Compile Include="Add_istochnik.xaml.cs">
       <DependentUpon>Add_istochnik.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Del_istochnik.xaml.cs">
+      <DependentUpon>Del_istochnik.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Del_vibros.xaml.cs">
       <DependentUpon>Del_vibros.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Red_istochnik.xaml.cs">
+      <DependentUpon>Red_istochnik.xaml</DependentUpon>
     </Compile>
     <Compile Include="Red_vibros.xaml.cs">
       <DependentUpon>Red_vibros.xaml</DependentUpon>
@@ -100,7 +106,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Del_istochnik.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Del_vibros.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Red_istochnik.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

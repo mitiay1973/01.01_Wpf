@@ -136,17 +136,34 @@ namespace WpfApp1
             Close();
         }
 
-        private void redactIstochnik_Copy_Click(object sender, RoutedEventArgs e)
-        {
-            Red_vibros Rvibr = new Red_vibros();
-            Rvibr.Show();
-            Close();
-        }
 
         private void addvibros_Click(object sender, RoutedEventArgs e)
         {
             Add_istochnik ist = new Add_istochnik();
             ist.Show();
+            Close();
+        }
+
+        private void delvibros_Click(object sender, RoutedEventArgs e)
+        {
+            Del_istochnik dist = new Del_istochnik();
+            dist.Show();
+            Close();
+        }
+
+
+        private void redactvibros_Click_2(object sender, RoutedEventArgs e)
+        {
+            Red_vibros Rvibr = new Red_vibros();
+            Rvibr.Show();
+            Close();
+
+        }
+
+        private void redactIstochnik_Click(object sender, RoutedEventArgs e)
+        {
+            Red_istochnik Rist = new Red_istochnik();
+            Rist.Show();
             Close();
         }
     }
