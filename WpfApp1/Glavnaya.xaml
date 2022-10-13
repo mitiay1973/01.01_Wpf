@@ -66,7 +66,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="minvibros" Content="Минимальные выбросы" HorizontalAlignment="Left" Margin="18,534,0,0" VerticalAlignment="Top" Foreground="#FFE4A455" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16"/>
-        <Button x:Name="maxvibros" Content="Максимальные выбросы" HorizontalAlignment="Left" Margin="213,534,0,0" VerticalAlignment="Top" Foreground="#FFE4A455" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" Grid.ColumnSpan="2" Width="187"/>
+        <Button x:Name="maxvibros" Content="Максимальные выбросы" HorizontalAlignment="Left" Margin="213,534,0,0" VerticalAlignment="Top" Foreground="#FFE4A455" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" Grid.ColumnSpan="2" Width="187" Click="maxvibros_Click"/>
         <Button x:Name="sredvibros" Content="Средние выбросы" HorizontalAlignment="Left" Margin="55,534,0,0" VerticalAlignment="Top" Grid.Column="1" Foreground="#FFE4A455" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16"/>
         <Label Content="Источник" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Выборы" HorizontalAlignment="Left" Margin="91,10,0,0" VerticalAlignment="Top"/>

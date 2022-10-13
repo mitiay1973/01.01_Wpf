@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp1.maxVibr"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Максимальные выбросы" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="table_1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="111,86,111,284" SelectionChanged="table_1_SelectionChanged" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black">
+            <DataGrid.Resources>
+                <col:ArrayList x:Key="Vibrosi">
+                    <DataGridTextColumn Header="Номер выброса" Binding="{Binding Path=ID_Emission}" Width="90" />
+                    <DataGridHyperlinkColumn Header="Номер источника выброса" Binding="{Binding Path=ID_Souce}" Width="80" />
+                    <DataGridTextColumn Header="Количество выбросов" Binding="{Binding Path=Count}" Width="50" />
+                    <DataGridTextColumn Header="Комментарий" Binding="{Binding Path=Text}" Width="500"  MinWidth="500"/>
+                    <DataGridTextColumn Header="Дата" Binding="{Binding Path=date}" Width="50" />
+                </col:ArrayList>
+            </DataGrid.Resources>
+        </DataGrid>
+        <Label Content="Максимальные выбросы" HorizontalAlignment="Left" Margin="111,52,0,0" VerticalAlignment="Top" Height="29" Width="318"/>
+        <Button x:Name="MaxClose" Content="Ок" HorizontalAlignment="Center" Margin="0,308,0,0" VerticalAlignment="Top" Height="47" Width="196" Click="MaxClose_Click"/>
+    </Grid>
+</Window>

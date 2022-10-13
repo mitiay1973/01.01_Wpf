@@ -87,6 +87,9 @@
     <Compile Include="Del_vibros.xaml.cs">
       <DependentUpon>Del_vibros.xaml</DependentUpon>
     </Compile>
+    <Compile Include="maxVibr.xaml.cs">
+      <DependentUpon>maxVibr.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Red_istochnik.xaml.cs">
       <DependentUpon>Red_istochnik.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,10 @@
     <Page Include="Del_vibros.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="maxVibr.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Red_istochnik.xaml">
       <Generator>MSBuild:Compile</Generator>

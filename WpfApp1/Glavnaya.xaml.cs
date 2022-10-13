@@ -166,6 +166,13 @@ namespace WpfApp1
             Rist.Show();
             Close();
         }
+
+        private void maxvibros_Click(object sender, RoutedEventArgs e)
+        {
+            maxVibr max = new maxVibr();
+            max.Show();
+            Close();
+        }
     }
 
     internal class Vibros
