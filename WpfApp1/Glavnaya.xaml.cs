@@ -14,6 +14,7 @@ namespace WpfApp1
     {
         public Glavnaya()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
             using (SqlConnection connection = new SqlConnection("server=ngknn.ru;Trusted_Connection=No;DataBase=43p_rad_Sor_Man;User=33П;PWD=12357"))
             {
@@ -165,6 +166,11 @@ namespace WpfApp1
             Red_istochnik Rist = new Red_istochnik();
             Rist.Show();
             Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 

@@ -19,6 +19,7 @@ namespace WpfApp1
         Registration reg = new Registration();
         public MainWindow()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 

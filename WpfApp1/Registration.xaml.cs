@@ -14,6 +14,7 @@ namespace WpfApp1
         public string regParol;
         public Registration()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 

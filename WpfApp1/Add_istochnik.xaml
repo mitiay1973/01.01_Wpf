@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Добавить источник" Height="377" Width="219">
+        Title="Добавить источник" Height="257" Width="231">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -13,25 +13,46 @@
                 <GradientStop Color="#FF85A45A" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label Content="Имя" HorizontalAlignment="Left" Margin="41,91,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" Foreground="#FF99D24A"/>
-        <TextBox x:Name="name" HorizontalAlignment="Left" Margin="48,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}"  BorderBrush="Black" TextChanged="name_TextChanged"/>
-        <Label Content="Адрес" HorizontalAlignment="Left" Margin="69,150,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" Foreground="#FF99D24A"/>
-        <TextBox x:Name="adress" HorizontalAlignment="Left" Margin="48,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="24" Height="23"  Background="{x:Null}"  BorderBrush="Black" TextChanged="adress_TextChanged"/>
-        <Button x:Name="addist" Content="Добавить" HorizontalAlignment="Left" Margin="22,303,0,0" VerticalAlignment="Top"  FontFamily="Bahnschrift" BorderBrush="{x:Null}" Background="{x:Null}" Click="addist_Click">
-            <Button.Foreground>
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="91,27,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="20" Height="33" Width="46"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Margin="55,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118" FontSize="24" Height="22"  Background="{x:Null}" TextChanged="name_TextChanged">
+            <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF0D0E0C" Offset="0.61"/>
-                    <GradientStop Color="#FF84F710" Offset="0"/>
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="62" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="White" Offset="0.38"/>
+                    <GradientStop Color="#FF007BFF" Offset="0.86"/>
+                    <GradientStop Color="#FF0078F9" Offset="0"/>
+                    <GradientStop Color="#FF99B4D1" Offset="0.65"/>
                 </LinearGradientBrush>
-            </Button.Foreground>
-        </Button>
-        <Button x:Name="otmist" Content="Отменить" HorizontalAlignment="Left" Margin="135,303,0,0" VerticalAlignment="Top" Click="otmist_Click" FontFamily="Bahnschrift" BorderBrush="{x:Null}" Background="{x:Null}">
-            <Button.Foreground>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <Label Content="Адрес" HorizontalAlignment="Left" Margin="86,93,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" FontSize="20" Height="32" Width="58"/>
+        <TextBox x:Name="adress" HorizontalAlignment="Left" Margin="55,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118" FontSize="24" Height="24"  Background="{x:Null}" TextChanged="adress_TextChanged">
+            <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF0D0E0C" Offset="0.61"/>
-                    <GradientStop Color="#FF84F710" Offset="0"/>
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="62" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="White" Offset="0.387"/>
+                    <GradientStop Color="#FF007BFF" Offset="1"/>
+                    <GradientStop Color="#FF0075F4" Offset="0"/>
+                    <GradientStop Color="#FFB8DAFF" Offset="0.56"/>
+                    <GradientStop Color="#FF99B4D1" Offset="0.56"/>
                 </LinearGradientBrush>
-            </Button.Foreground>
-        </Button>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <Button x:Name="addist" Content="Добавить" HorizontalAlignment="Left" Margin="10,181,0,0" VerticalAlignment="Top"  FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Click="addist_Click" Foreground="#FFE4A455" FontSize="20"/>
+        <Button x:Name="otmist" Content="Отменить" HorizontalAlignment="Left" Margin="122,181,0,0" VerticalAlignment="Top" Click="otmist_Click" FontFamily="Monotype Corsiva" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" FontSize="20"/>
     </Grid>
 </Window>

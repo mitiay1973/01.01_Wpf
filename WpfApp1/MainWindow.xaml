@@ -124,9 +124,9 @@
         <Label Content="Пароль" HorizontalAlignment="Left" Margin="202,255,0,0" VerticalAlignment="Top" Height="49" Width="110" FontSize="36" FontFamily="Monotype Corsiva" Foreground="#FFE4A455"/>
         <Button x:Name="avtoriz" Style="{DynamicResource DefaultButtonStyle}" Content="Вход" HorizontalAlignment="Left" Margin="55,374,0,0" VerticalAlignment="Top" FontSize="36" Background="{x:Null}" Click="avtoriz_Click" Width="87" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontFamily="Monotype Corsiva" Height="42"/>
         <Button x:Name="registr" Style="{DynamicResource DefaultButtonStyle}" Content="Регистрация" HorizontalAlignment="Left" Margin="371,374,0,0" VerticalAlignment="Top" FontSize="36" Background="{x:Null}" Click="registr_Click" Width="182" BorderBrush="{x:Null}" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" BorderThickness="0,1,0,0" Height="49"/>
-        <TextBox x:Name="login" Margin="153,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Height="46" TextChanged="parol_TextChanged" Background="{x:Null}" HorizontalAlignment="Left" Width="208">
+        <TextBox x:Name="login" Margin="153,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Height="46" TextChanged="parol_TextChanged" Background="{x:Null}" HorizontalAlignment="Left" Width="208" RenderTransformOrigin="0.5,0.5">
             <TextBox.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" SpreadMethod="Repeat" MappingMode="RelativeToBoundingBox">
                     <LinearGradientBrush.RelativeTransform>
                         <TransformGroup>
                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -138,7 +138,7 @@
                     <GradientStop Color="#FF0047F9"/>
                     <GradientStop Color="#FF0047F9" Offset="1"/>
                     <GradientStop Color="White" Offset="0.383"/>
-                    <GradientStop Color="White" Offset="0.7"/>
+                    <GradientStop Color="#FF99B4D1" Offset="0.7"/>
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>

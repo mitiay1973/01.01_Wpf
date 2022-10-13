@@ -23,6 +23,7 @@ namespace WpfApp1
     {
         public Red_istochnik()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 

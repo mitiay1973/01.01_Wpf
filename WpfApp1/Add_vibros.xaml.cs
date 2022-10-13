@@ -23,6 +23,7 @@ namespace WpfApp1
     {
         public Add_vibros()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 
