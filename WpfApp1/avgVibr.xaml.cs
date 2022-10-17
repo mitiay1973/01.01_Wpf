@@ -29,19 +29,29 @@ namespace WpfApp1
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand("select avg(Count) from Vibrosi", connection);
-                float n = Convert.ToInt32(command.ExecuteScalar().ToString());
-                int id;
-                int id1;
-                string text;
-                string Date;
-                SqlCommand command1 = new SqlCommand("select ID_Emission FROM Vibrosi WHERE Count=" + n + "", connection);
-                id1 = Convert.ToInt32(command1.ExecuteScalar().ToString());
-                SqlCommand command2 = new SqlCommand("select ID_Souce FROM Vibrosi WHERE Count=" + n + "", connection);
-                id = Convert.ToInt32(command2.ExecuteScalar().ToString());
-                SqlCommand command3 = new SqlCommand("select Text FROM Vibrosi WHERE Count=" + n + "", connection);
-                text = Convert.ToString(command3.ExecuteScalar().ToString());
-                SqlCommand command4 = new SqlCommand("select date FROM Vibrosi WHERE Count=" + n + "", connection);
-                Date = Convert.ToString(command4.ExecuteScalar().ToString());
+                string nn = command.ExecuteScalar().ToString();
+                float n = float.Parse(nn); 
+                n = Convert.ToInt32(Math.Round(n,1));
+                int id=0;
+                int id1=0;
+                string text="";
+                string Date="";
+                SqlCommand commandd1 = new SqlCommand("select ID_Emission FROM Vibrosi WHERE Count=" + n + "", connection);
+                if (commandd1.ExecuteScalar() is null)
+                {
+                   
+                }
+                else
+                {
+                    SqlCommand command1 = new SqlCommand("select ID_Emission FROM Vibrosi WHERE Count=" + n + "", connection);
+                    id1 = Convert.ToInt32(command1.ExecuteScalar().ToString());
+                    SqlCommand command2 = new SqlCommand("select ID_Souce FROM Vibrosi WHERE Count=" + n + "", connection);
+                    id = Convert.ToInt32(command2.ExecuteScalar().ToString());
+                    SqlCommand command3 = new SqlCommand("select Text FROM Vibrosi WHERE Count=" + n + "", connection);
+                    text = Convert.ToString(command3.ExecuteScalar().ToString());
+                    SqlCommand command4 = new SqlCommand("select date FROM Vibrosi WHERE Count=" + n + "", connection);
+                    Date = Convert.ToString(command4.ExecuteScalar().ToString());
+                }
                 List<Vibros> vibrosList = new List<Vibros>
                 {
 

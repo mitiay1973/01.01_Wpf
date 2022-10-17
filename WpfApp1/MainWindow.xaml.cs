@@ -49,7 +49,7 @@ namespace WpfApp1
                         int h = i;
                         SqlCommand command2 = new SqlCommand("SELECT [Password] FROM [dbo].[Users] WHERE [ID_User] = " + h + "", connection);
                         par = command2.ExecuteScalar().ToString();
-                        if (par == parol.Text)
+                        if (par == parol.Password)
                         {
                             Glavnaya glavnaya = new Glavnaya();
                             glavnaya.Show();
