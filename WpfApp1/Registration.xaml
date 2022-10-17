@@ -137,9 +137,9 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <Button x:Name="registration" Style="{DynamicResource DefaultButtonStyle}" Content="Зарегистрироваться" HorizontalAlignment="Center" Margin="0,357,0,0" VerticalAlignment="Top" Click="registration_Click" Height="67" Width="292" FontFamily="Monotype Corsiva" FontSize="36" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455"/>
+        <Button x:Name="registration" Style="{DynamicResource DefaultButtonStyle}" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="80,358,0,0" VerticalAlignment="Top" Click="registration_Click" Height="66" Width="292" FontFamily="Monotype Corsiva" FontSize="36" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455"/>
         <Label Content="Пароль" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Width="116" FontSize="36" FontFamily="Monotype Corsiva" Foreground="#FFE4A455" Margin="0,248,0,0" RenderTransformOrigin="0.649,0.621"/>
         <Image HorizontalAlignment="Center" Height="84" Margin="0,13,0,0" VerticalAlignment="Top" Width="206" IsEnabled="False" Source="/png-transparent-factory-pipe-silhouette-factory-refinery-industrial-production-PhotoRoom (1).png"/>
-
+        <Button x:Name="vxod" Style="{DynamicResource DefaultButtonStyle}" Content="Назад " HorizontalAlignment="Left" Margin="506,361,0,0" VerticalAlignment="Top"  Height="60" Width="170" FontFamily="Monotype Corsiva" FontSize="36" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFE4A455" Click="vxod_Click"/>
     </Grid>
 </Window>

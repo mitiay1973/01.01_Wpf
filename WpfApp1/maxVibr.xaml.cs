@@ -37,7 +37,7 @@ namespace WpfApp1
                 SqlCommand command1 = new SqlCommand("select ID_Emission FROM Vibrosi WHERE Count=" + n + "", connection);
                 id1 = Convert.ToInt32(command1.ExecuteScalar().ToString());
                 SqlCommand command2 = new SqlCommand("select ID_Souce FROM Vibrosi WHERE Count=" + n + "", connection);
-                id = Convert.ToInt32(command1.ExecuteScalar().ToString());
+                id = Convert.ToInt32(command2.ExecuteScalar().ToString());
                 SqlCommand command3 = new SqlCommand("select Text FROM Vibrosi WHERE Count=" + n + "", connection);
                 text = Convert.ToString(command3.ExecuteScalar().ToString());
                 SqlCommand command4 = new SqlCommand("select date FROM Vibrosi WHERE Count=" + n + "", connection);

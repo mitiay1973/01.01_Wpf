@@ -6,8 +6,81 @@
         xmlns:local="clr-namespace:WpfApp1"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:col="clr-namespace:System.Collections;assembly=mscorlib" x:Class="WpfApp1.Glavnaya"
         mc:Ignorable="d"
-        Title="Glavnaya" Height="552" Width="820" Icon="/png-transparent-factory-pipe-silhouette-factory-refinery-industrial-production.png">
+        Title="Главная" Height="552" Width="820"  MaxHeight="552" MinHeight="552" MaxWidth="820" MinWidth="820" Icon="/png-transparent-factory-pipe-silhouette-factory-refinery-industrial-production.png">
     <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2"
+                       SnapsToDevicePixels="true"
+                       Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+                       StrokeDashArray="1 2"
+                       StrokeThickness="1" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <SolidColorBrush x:Key="Button.Static.Background"
+                     Color="#FFDDDDDD" />
+        <SolidColorBrush x:Key="Button.Static.Border"
+                     Color="#FF707070" />
+        <SolidColorBrush x:Key="Button.MouseOver.Background"
+                     Color="#FF85A45A" />
+        <SolidColorBrush x:Key="Button.MouseOver.Border"
+                     Color="#FF3C7FB1" />
+        <SolidColorBrush x:Key="Button.Pressed.Background"
+                     Color="#FFC4E5F6" />
+        <SolidColorBrush x:Key="Button.Pressed.Border"
+                     Color="#FF2C628B" />
+        <SolidColorBrush x:Key="Button.Disabled.Background"
+                     Color="#FFF4F4F4" />
+        <SolidColorBrush x:Key="Button.Disabled.Border"
+                     Color="#FFADB2B5" />
+        <SolidColorBrush x:Key="Button.Disabled.Foreground"
+                     Color="#FF838383" />
+
+        <Style x:Key="DefaultButtonStyle"
+           TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}" />
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}" />
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Padding" Value="1" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter"
+                                Margin="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Focusable="False"
+                                RecognizesAccessKey="True"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter TargetName="border" Property="Background" Value="{StaticResource Button.Disabled.Background}" />
+                                <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource Button.Disabled.Border}" />
+                                <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="{StaticResource Button.Disabled.Foreground}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
         <SolidColorBrush x:Key="Menu.Static.Background" Color="#FF7E9B55"/>
         <Style x:Key="MenuStyle" TargetType="{x:Type Menu}">
             <Setter Property="Background" Value="{StaticResource Menu.Static.Background}"/>
@@ -352,12 +425,12 @@
         </Menu>
         <Label Content="Источник выбросов" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top" Foreground="#FFE4A455" FontSize="16"/>
         <Label Content="Выбросы" HorizontalAlignment="Left" Margin="13,286,0,0" VerticalAlignment="Top" Foreground="#FFE4A455" FontSize="16"/>
-        <Button x:Name="addIstochnik" Content="Добавить выброс" HorizontalAlignment="Left" Margin="609,317,0,0" VerticalAlignment="Top" Click="addIstochnik_Click" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontSize="16"/>
-        <Button x:Name="delIstochnik" Content="Удалить выброс" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="609,357,0,0" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" Click="delIstochnik_Click" FontSize="16" Height="21" Width="123"/>
-        <Button x:Name="redactIstochnik" Content="Редактировать источник" Margin="609,169,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontSize="16" Height="24" Click="redactIstochnik_Click" HorizontalAlignment="Left" Width="193"/>
-        <Button x:Name="addvibros" Content="Добавить источник" HorizontalAlignment="Left" Margin="609,89,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontSize="16" Click="addvibros_Click"/>
-        <Button x:Name="delvibros" Content="Удалить источник" HorizontalAlignment="Left" Margin="609,129,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontSize="16" Click="delvibros_Click"/>
-        <Button x:Name="redactvibros" Content="Редактировать выброс" HorizontalAlignment="Left" Margin="609,397,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontSize="16" Click="redactvibros_Click_2"    />
+        <Button x:Name="addIstochnik" Style="{DynamicResource DefaultButtonStyle}" Content="Добавить выброс" HorizontalAlignment="Left" Margin="609,317,0,0" VerticalAlignment="Top" Click="addIstochnik_Click" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontSize="16"/>
+        <Button x:Name="delIstochnik" Style="{DynamicResource DefaultButtonStyle}" Content="Удалить выброс" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="609,357,0,0" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" Click="delIstochnik_Click" FontSize="16" Height="21" Width="123"/>
+        <Button x:Name="redactIstochnik" Style="{DynamicResource DefaultButtonStyle}" Content="Редактировать источник" Margin="609,169,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontSize="16" Height="24" Click="redactIstochnik_Click" HorizontalAlignment="Left" Width="193"/>
+        <Button x:Name="addvibros" Style="{DynamicResource DefaultButtonStyle}" Content="Добавить источник" HorizontalAlignment="Left" Margin="609,89,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontSize="16" Click="addvibros_Click"/>
+        <Button x:Name="delvibros" Style="{DynamicResource DefaultButtonStyle}" Content="Удалить источник" HorizontalAlignment="Left" Margin="609,129,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontSize="16" Click="delvibros_Click"/>
+        <Button x:Name="redactvibros" Style="{DynamicResource DefaultButtonStyle}" Content="Редактировать выброс" HorizontalAlignment="Left" Margin="609,397,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE4A455" FontSize="16" Click="redactvibros_Click_2"    />
         <DataGrid x:Name="table_1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="18,314,0,0" SelectionChanged="table_1_SelectionChanged" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Height="124" VerticalAlignment="Top" HorizontalAlignment="Left" Width="578">
             <DataGrid.Resources>
                 <col:ArrayList x:Key="Vibrosi">
@@ -381,11 +454,11 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="minvibros" Content="Минимальные выбросы" HorizontalAlignment="Left" Margin="20,466,0,0" VerticalAlignment="Top" Foreground="#FFE4A455" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" FontWeight="Bold" Click="minvibros_Click"/>
-        <Button x:Name="maxvibros" Content="Максимальные выбросы" HorizontalAlignment="Left" Margin="231,466,0,0" VerticalAlignment="Top" Foreground="#FFE4A455" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" Width="203" FontWeight="Bold" Click="maxvibros_Click"/>
-        <Button x:Name="sredvibros" Content="Средние выбросы" HorizontalAlignment="Left" Margin="448,466,0,0" VerticalAlignment="Top" Foreground="#FFE4A455" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" FontWeight="Bold" Click="sredvibros_Click"/>
+        <Button x:Name="minvibros" Style="{DynamicResource DefaultButtonStyle}" Content="Минимальные выбросы" HorizontalAlignment="Left" Margin="20,466,0,0" VerticalAlignment="Top" Foreground="#FFE4A455" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" FontWeight="Bold" Click="minvibros_Click"/>
+        <Button x:Name="maxvibros" Style="{DynamicResource DefaultButtonStyle}" Content="Максимальные выбросы" HorizontalAlignment="Left" Margin="231,466,0,0" VerticalAlignment="Top" Foreground="#FFE4A455" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" Width="203" FontWeight="Bold" Click="maxvibros_Click"/>
+        <Button x:Name="sredvibros" Style="{DynamicResource DefaultButtonStyle}" Content="Средние выбросы" HorizontalAlignment="Left" Margin="448,466,0,0" VerticalAlignment="Top" Foreground="#FFE4A455" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" FontWeight="Bold" Click="sredvibros_Click"/>
 
-        <Button Content="" HorizontalAlignment="Left" Margin="747,-5,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="35" Width="63" Click="Button_Click">
+        <Button Content="" Style="{DynamicResource DefaultButtonStyle}" HorizontalAlignment="Left" Margin="747,-5,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="35" Width="63" Click="Button_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/button_photo1-PhotoRoom (2).png"/>
             </Button.Background>

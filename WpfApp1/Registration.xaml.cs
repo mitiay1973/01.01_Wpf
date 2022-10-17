@@ -22,10 +22,23 @@ namespace WpfApp1
         {
             regLogin = login.Text;
             regParol = parol.Text;
-            DataTable dt = Select("insert into Users (Login, Password) values ('" + regLogin + "','" + regParol + "');");
-            new MainWindow().Show();
-            Close();
-
+            if(regLogin != "")
+            {
+                if(regParol!="")
+                {
+                    DataTable dt = Select("insert into Users (Login, Password) values ('" + regLogin + "','" + regParol + "');");
+                    new MainWindow().Show();
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Заполните поле пароля");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Заполните поле логина");
+            }
         }
 
         private void parol_TextChanged(object sender, TextChangedEventArgs e)
@@ -49,6 +62,12 @@ namespace WpfApp1
             sqlDataAdapter.Fill(dataTable);
             sqlConnection.Close(); // возращаем таблицу с результатом
             return dataTable;
+        }
+
+        private void vxod_Click(object sender, RoutedEventArgs e)
+        {
+            new MainWindow().Show();
+            Close();
         }
     }
 }
