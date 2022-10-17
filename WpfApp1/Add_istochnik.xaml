@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Добавить источник" Height="273" Width="285" Icon="/png-transparent-factory-pipe-silhouette-factory-refinery-industrial-production.png">
+        Title="Добавить источник" Height="273" Width="285" MaxHeight="273" MaxWidth="285" MinHeight="273" MinWidth="285" Icon="/png-transparent-factory-pipe-silhouette-factory-refinery-industrial-production.png">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
