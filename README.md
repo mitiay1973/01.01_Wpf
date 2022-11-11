@@ -1,14 +1,19 @@
-# 01.01_Wpf
-## Начало работы
-Для начала работы с приложением вам необходимо скачать и распаковать архив с программой. После нужно запустить .exe файл по пути ***"01.01_Wpf\WpfApp1\bin\Debug\WpfApp1.exe"***.
+# 01.01_Wpf 
+Графический интерфейс для работы с базой данных.
 ___
-## Необходимые условия
-* Для запуска программы необходим компьютер на ОС **Windows XP** или новее.
+## Начало работы
+Для начала работы с приложением вам необходимо скачать и распаковать архив с программой. 
+___
+### Необходимые условия
+* Для запуска программы необходим компьютер на ОС **Windows 7** или новее.
   * Пакет Net Framework 4.8 или выше.
 * Подключение к интернету.
 ___
+### Установка
 
-## Работа с программой
+После распаковки нужно запустить .exe файл по пути ***"01.01_Wpf\WpfApp1\bin\Debug\WpfApp1.exe"***.
+___
+### Работа с программой
 После запуска приложения появится окно авторизации.
 
 ![Авторизация](https://sun9-north.userapi.com/sun9-85/s/v1/ig2/dzHogOD1vkVKNnzRDyvcE4Pqbyy87v-g4NjmNB6Akz_evMo41venUrYK2Ddm5_gjElaA3pdP-SMJ53xCD8yeR5mz.jpg?size=565x447&quality=96&type=album)
@@ -32,7 +37,7 @@ ___
 Удаление и изменения работают аналогично.
 ___
 
-## Код работы вывода таблиц
+### Код работы вывода таблиц
 
 
 Данный код при необходимости можно оптимизировать для увеличения быстродействия программы.
@@ -84,6 +89,53 @@ using (SqlConnection connection = new SqlConnection("server=ngknn.ru;Trusted_Con
                 
                 table_1.ItemsSource = vibrosList;
             }
+~~~
+
+Такая же ситуация и с кодом для второй таблицы
+
+~~~ c#
+using (SqlConnection connection = new SqlConnection("server=ngknn.ru;Trusted_Connection=No;DataBase=43p_rad_Sor_Man;User=33П;PWD=12357"))
+            {
+                connection.Open();
+                SqlCommand commandd = new SqlCommand("select max(ID_Source) from Istochniki", connection);
+                int n = Convert.ToInt32(commandd.ExecuteScalar().ToString());
+                string[] name = new string[n];
+                string[] adress = new string[n];
+
+                for (int i = 1; i <= n; i++)
+                {
+                    SqlCommand commandd1 = new SqlCommand("select Name FROM Istochniki WHERE ID_Source=" + i + "", connection);
+                    if (commandd1.ExecuteScalar() is null)
+                    {
+
+                    }
+                    else
+                    {
+                        
+                        name[i - 1] = Convert.ToString(commandd1.ExecuteScalar().ToString());
+                        SqlCommand commandd2 = new SqlCommand("select Adress FROM Istochniki WHERE ID_Source=" + i + "", connection);
+                        adress[i - 1] = Convert.ToString(commandd2.ExecuteScalar().ToString());
+                    }
+                }
+                List<Istochniki> istochnikList = new List<Istochniki>
+                {
+
+                };
+                for (int i = 1; i <= n; i++)
+                {
+                    if (name[i - 1] == null)
+                    {
+
+                    }
+                    else
+                    {
+                        istochnikList.Add(new Istochniki { ID_Souce = i, Name = name[i-1], Adress = adress[i-1] });
+                    }
+                }
+                table_2.ItemsSource = istochnikList;
+            }
+
+        }
 ~~~
 ___
 ## Авторы
